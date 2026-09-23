@@ -31,6 +31,7 @@ export default function App() {
     queryFn: () => fetchMovies(query, page),
     enabled: query !== "",
     staleTime: 1000 * 60 * 5,
+    placeholderData: (previousData) => previousData,
   });
 
   const movies = data?.results ?? [];

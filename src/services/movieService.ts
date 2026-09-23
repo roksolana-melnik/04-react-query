@@ -1,5 +1,10 @@
 import axios from "axios";
-import type { TMDBMoviesResponse } from "../types/movie";
+import type { Movie } from "../types/movie";
+
+interface TMDBMoviesResponse {
+  results: Movie[];
+  total_pages: number;
+}
 
 export async function fetchMovies(
   query: string,
